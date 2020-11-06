@@ -12,7 +12,7 @@ export function App() {
         <React.Suspense fallback="Loading...">
           <Router>
             <Home path="/" />
-            <Redirect noThrow from="*" to="Home" />
+            <Redirect noThrow from="*" to="/" />
           </Router>
         </React.Suspense>
       </AppWrapper>
