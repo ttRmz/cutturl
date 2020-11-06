@@ -1,3 +1,4 @@
 {
-  "home": "Bienvenue"
+  "home": "Bienvenue",
+  "dashboard": { "head": "Tableau de bord" }
 }

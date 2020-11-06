@@ -1,3 +1,4 @@
 {
-  "home": "Welcome"
+  "home": "Welcome",
+  "dashboard": { "head": "Dashboard" }
 }

@@ -4,6 +4,7 @@ import { RestfulProvider } from 'restful-react'
 import { AppWrapper } from './App.styles'
 
 const Home = React.lazy(() => import('../pages/Home/Home'))
+const Dashboard = React.lazy(() => import('../pages/Dashboard/Dashboard'))
 
 export function App() {
   return (
@@ -12,6 +13,8 @@ export function App() {
         <React.Suspense fallback="Loading...">
           <Router>
             <Home path="/" />
+            <Dashboard path="/dashboard" />
+
             <Redirect noThrow from="*" to="/" />
           </Router>
         </React.Suspense>
