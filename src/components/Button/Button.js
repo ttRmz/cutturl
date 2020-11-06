@@ -5,9 +5,10 @@ export const Button = styled.button`
   font-size: 14px;
   padding: 14px 22px;
   border-radius: 4px;
-  background-color: ${({ primary }) => (primary ? '#1fc19f' : '#363C3F')};
-  box-shadow: ${({ primary }) =>
-    `0px 4px 0px ${primary ? '#16a085' : '#000000'}`};
+  background-color: ${({ primary, theme }) =>
+    primary ? theme.primary.base : theme.secondary.base};
+  box-shadow: ${({ primary, theme }) =>
+    `0px 4px 0px ${primary ? theme.primary.dark : theme.secondary.dark}`};
   font-weight: 700;
   color: #fff;
   min-width: 160px;

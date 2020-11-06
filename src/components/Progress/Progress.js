@@ -13,7 +13,7 @@ export const Progress = styled.div`
 
   &:before {
     content: '';
-    background-color: #1fc19f;
+    background-color: ${({ theme }) => theme.primary.base};
     position: absolute;
     top: 0;
     left: 0;
@@ -42,7 +42,7 @@ export const Progress = styled.div`
 
   &:after {
     content: '';
-    background-color: #1fc19f;
+    background-color: ${({ theme }) => theme.primary.base};
     position: absolute;
     top: 0;
     left: 0;

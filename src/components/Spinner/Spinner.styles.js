@@ -18,7 +18,7 @@ export const SpinnerWrapper = styled.div`
     top: 0;
     position: absolute;
     transform: rotate(-90deg);
-    stroke: #1fc19f;
+    stroke: ${({ theme }) => theme.primary.base};
     stroke-dasharray: 1, 300;
     stroke-dashoffset: 0;
     animation: strokeanim 3s ease infinite;
