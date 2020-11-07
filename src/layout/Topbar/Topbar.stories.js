@@ -9,7 +9,7 @@ const Main = styled.main`
 `
 
 export default {
-  title: 'NAVIGATION/Topbar',
+  title: 'Navigation/Topbar',
   component: Topbar,
 }
 

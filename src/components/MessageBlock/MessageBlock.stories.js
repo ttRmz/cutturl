@@ -3,7 +3,7 @@ import React from 'react'
 import { MessageBlock } from './MessageBlock'
 
 export default {
-  title: 'MessageBlock',
+  title: 'Display/MessageBlock',
   component: MessageBlock,
   argTypes: {
     color: {

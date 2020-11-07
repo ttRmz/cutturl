@@ -4,7 +4,7 @@ import { PageTitle } from '../../components'
 import { Layout } from './Layout'
 
 export default {
-  title: 'NAVIGATION/Layout',
+  title: 'Navigation/Layout',
   component: Layout,
 }
 

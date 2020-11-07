@@ -3,7 +3,7 @@ import React from 'react'
 import { PageTitle } from './PageTitle'
 
 export default {
-  title: 'PageTitle',
+  title: 'Display/PageTitle',
   component: PageTitle,
   argTypes: {
     align: {
