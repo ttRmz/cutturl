@@ -1,9 +1,13 @@
 import { Link } from '@reach/router'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { Button, Logo, PageTitle } from '../../components'
+import { Logo, PageTitle } from '../../components'
 import { setPageTitle } from '../../core/setPageTitle'
-import { HomeWrapper } from './Home.styles'
+import { Layout } from '../../layout'
+import { HomeAction } from './Home.styles'
+
+// prevent warnings on DOM rendering
+const ButtonLink = ({ extended, primary, ...props }) => <Link {...props} />
 
 export default function Home() {
   const { t } = useTranslation()
@@ -13,18 +17,18 @@ export default function Home() {
   }, [])
 
   return (
-    <HomeWrapper>
+    <Layout centered>
       <Logo />
 
-      <PageTitle>{process.env.REACT_APP_NAME}</PageTitle>
+      <PageTitle aliign="center">{process.env.REACT_APP_NAME}</PageTitle>
 
-      <Button as={Link} to="/auth" primary>
+      <HomeAction as={ButtonLink} to="/auth" primary>
         {t('home.key')}
-      </Button>
+      </HomeAction>
 
-      <Button as={Link} to="/dashboard">
+      <HomeAction as={ButtonLink} to="/dashboard">
         {t('home.demo')}
-      </Button>
-    </HomeWrapper>
+      </HomeAction>
+    </Layout>
   )
 }

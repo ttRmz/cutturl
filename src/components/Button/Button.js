@@ -13,10 +13,12 @@ export const Button = styled.button`
   color: #fff;
   min-width: 160px;
   text-align: center;
+  ${({ extended }) => extended && `width: 100%;`}
 `
 
 Button.propTypes = {
   primary: PropTypes.bool,
+  extended: PropTypes.bool,
 }
 
-Button.defaultProps = { primary: false }
+Button.defaultProps = { primary: false, extended: false }

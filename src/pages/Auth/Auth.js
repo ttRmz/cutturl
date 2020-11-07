@@ -12,7 +12,8 @@ import {
 } from '../../components'
 import { useUserContext } from '../../contexts/user'
 import { setPageTitle } from '../../core/setPageTitle'
-import { AuthField, AuthLink, AuthWrapper } from './Auth.styles'
+import { Layout } from '../../layout'
+import { AuthField, AuthLink } from './Auth.styles'
 
 export default function Auth() {
   const { value: apiKey, onChange: setApiKey } = useInput('')
@@ -29,10 +30,10 @@ export default function Auth() {
   }
 
   return (
-    <AuthWrapper onSubmit={handleSubmitAuth}>
+    <Layout centered onSubmit={handleSubmitAuth}>
       <Logo />
 
-      <PageTitle>
+      <PageTitle align="center">
         {t('auth.head')}{' '}
         <a href="http://kutt.it" target="_blank" rel="noopener noreferrer">
           Kutt
@@ -55,7 +56,7 @@ export default function Auth() {
             <MessageBlock color="error">{t('auth.error')}</MessageBlock>
           )}
 
-          <Button onClick={handleSubmitAuth} type="submit" primary>
+          <Button extended onClick={handleSubmitAuth} type="submit" primary>
             {t('auth.submit')}
           </Button>
 
@@ -64,6 +65,6 @@ export default function Auth() {
           </AuthLink>
         </>
       )}
-    </AuthWrapper>
+    </Layout>
   )
 }

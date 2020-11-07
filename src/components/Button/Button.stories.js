@@ -13,5 +13,6 @@ export const Example = Template.bind({})
 
 Example.args = {
   primary: Button.defaultProps.primary,
+  extended: Button.defaultProps.extended,
   children: 'Button label',
 }
