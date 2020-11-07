@@ -1,5 +1,5 @@
 import { Link } from '@reach/router'
-import { useInput } from '@ttrmz/react-utils'
+import { stopEvent, useInput } from '@ttrmz/react-utils'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import {
@@ -23,8 +23,13 @@ export default function Auth() {
     setPageTitle(t('auth.title'))
   }, [t])
 
+  const handleSubmitAuth = event => {
+    stopEvent(event)
+    login(apiKey)
+  }
+
   return (
-    <AuthWrapper>
+    <AuthWrapper onSubmit={handleSubmitAuth}>
       <Logo />
 
       <PageTitle>
@@ -50,7 +55,7 @@ export default function Auth() {
             <MessageBlock color="error">{t('auth.error')}</MessageBlock>
           )}
 
-          <Button onClick={() => login(apiKey)} primary>
+          <Button onClick={handleSubmitAuth} type="submit" primary>
             {t('auth.submit')}
           </Button>
 
