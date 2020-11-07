@@ -1,5 +1,7 @@
 export * from './Button'
 export * from './Input'
 export * from './Logo'
+export * from './MessageBlock'
+export * from './PageTitle'
 export * from './Progress'
 export * from './Spinner'

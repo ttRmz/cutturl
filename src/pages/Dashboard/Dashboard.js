@@ -1,8 +1,8 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { Logo } from '../../components'
+import { Logo, PageTitle } from '../../components'
 import { setPageTitle } from '../../core/setPageTitle'
-import { DashboardTitle, DashboardWrapper } from './Dashboard.styles'
+import { DashboardWrapper } from './Dashboard.styles'
 
 export default function Dashboard() {
   const { t } = useTranslation()
@@ -15,7 +15,7 @@ export default function Dashboard() {
     <DashboardWrapper>
       <Logo />
 
-      <DashboardTitle>{t('dashboard.head')}</DashboardTitle>
+      <PageTitle>{t('dashboard.head')}</PageTitle>
     </DashboardWrapper>
   )
 }

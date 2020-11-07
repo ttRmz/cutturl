@@ -12,7 +12,7 @@ export const InputLabel = styled.span`
 export const InputField = styled.input`
   padding: 10px 0;
   display: block;
-  width: 300px;
+  width: 100%;
   border: none;
   background-color: transparent;
   border-bottom: ${({ theme }) => `2px solid ${theme.secondary.base}`};

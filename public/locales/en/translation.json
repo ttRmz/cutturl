@@ -1,4 +1,17 @@
 {
-  "home": "Welcome",
+  "home": {
+    "demo": "Try a demo",
+    "key": "Enter your API key"
+  },
+  "auth": {
+    "title": "API Key",
+    "head": "Enter your personal API key from",
+    "input": {
+      "label": "API Key",
+      "placeholder": "Your API key"
+    },
+    "submit": "Submit",
+    "error": "An error occurred, please verify your login informations"
+  },
   "dashboard": { "head": "Dashboard" }
 }

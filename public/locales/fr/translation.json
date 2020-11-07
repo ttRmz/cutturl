@@ -1,4 +1,17 @@
 {
-  "home": "Bienvenue",
+  "home": {
+    "demo": "Essayer une démo",
+    "key": "Entrer ma clé API"
+  },
+  "auth": {
+    "title": "Clé API",
+    "head": "Enter votre clé API personnelle depuis",
+    "input": {
+      "label": "Clé API",
+      "placeholder": "Votre clé API"
+    },
+    "submit": "Envoyer",
+    "error": "Une erreur est survenue, veuillez vérifier vos informations de connexion"
+  },
   "dashboard": { "head": "Tableau de bord" }
 }

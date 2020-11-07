@@ -7,8 +7,3 @@ export const DashboardWrapper = styled.div`
   justify-content: center;
   min-height: 100vh;
 `
-export const DashboardTitle = styled.h1`
-  margin-bottom: 44px;
-  margin-top: 18px;
-  font-weight: 900;
-`
