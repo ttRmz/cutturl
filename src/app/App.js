@@ -7,7 +7,9 @@ import { AppWrapper } from './App.styles'
 
 const Home = React.lazy(() => import('../pages/Home/Home'))
 const Dashboard = React.lazy(() => import('../pages/Dashboard/Dashboard'))
+
 const Auth = React.lazy(() => import('../pages/Auth/Auth'))
+const Logout = React.lazy(() => import('../pages/Logout/Logout'))
 
 export function App() {
   const { user } = useUserContext()
@@ -24,11 +26,13 @@ export function App() {
           <Router>
             <Dashboard path="/dashboard" />
 
-            {!apikey && (
+            {!apikey ? (
               <>
                 <Home path="/" />
                 <Auth path="/auth" />
               </>
+            ) : (
+              <Logout path="/logout" />
             )}
 
             <Redirect noThrow from="*" to={apikey ? '/dashboard' : '/'} />
