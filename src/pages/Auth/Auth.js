@@ -56,7 +56,7 @@ export default function Auth() {
             <MessageBlock color="error">{t('auth.error')}</MessageBlock>
           )}
 
-          <Button extended onClick={handleSubmitAuth} type="submit" primary>
+          <Button extended onClick={handleSubmitAuth} type="submit">
             {t('auth.submit')}
           </Button>
 

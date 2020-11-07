@@ -7,7 +7,7 @@ import { Layout } from '../../layout'
 import { HomeAction } from './Home.styles'
 
 // prevent warnings on DOM rendering
-const ButtonLink = ({ extended, primary, ...props }) => <Link {...props} />
+const ButtonLink = ({ extended, color, ...props }) => <Link {...props} />
 
 export default function Home() {
   const { t } = useTranslation()
@@ -22,11 +22,11 @@ export default function Home() {
 
       <PageTitle aliign="center">{process.env.REACT_APP_NAME}</PageTitle>
 
-      <HomeAction as={ButtonLink} to="/auth" primary>
+      <HomeAction as={ButtonLink} to="/auth">
         {t('home.key')}
       </HomeAction>
 
-      <HomeAction as={ButtonLink} to="/dashboard">
+      <HomeAction as={ButtonLink} color="secondary" to="/dashboard">
         {t('home.demo')}
       </HomeAction>
     </Layout>

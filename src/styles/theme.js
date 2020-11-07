@@ -16,6 +16,7 @@ export default {
   },
   error: {
     base: '#d41e1e',
+    dark: '#831717',
     light: 'rgba(255, 35, 35, 0.2)',
   },
 }
