@@ -28,12 +28,6 @@ yarn run start
 npm start
 ```
 
-## Env vars
-
-| NAME              |                                       |
-| ----------------- | ------------------------------------- |
-| REACT_APP_API_KEY | your [Kutt](https://kutt.it/) api key |
-
 ## Author
 
 👤 **Ramirez Tristan**
