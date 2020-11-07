@@ -3,6 +3,11 @@
     "demo": "Essayer une démo",
     "key": "Entrer ma clé API"
   },
+  "menu": {
+    "dashboard": "Générateur",
+    "history": "Historique",
+    "profile": "Profil"
+  },
   "auth": {
     "title": "Clé API",
     "head": "Enter votre clé API personnelle depuis",

@@ -14,7 +14,7 @@ export default function Dashboard() {
   }, [title])
 
   return (
-    <Layout title={title}>
+    <Layout showMenu title={title}>
       <PageTitle>{t('dashboard.head')}</PageTitle>
     </Layout>
   )

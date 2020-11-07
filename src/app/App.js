@@ -3,7 +3,6 @@ import React from 'react'
 import { RestfulProvider } from 'restful-react'
 import { Progress } from '../components'
 import { useUserContext } from '../contexts/user'
-import { AppWrapper } from './App.styles'
 
 const Home = React.lazy(() => import('../pages/Home/Home'))
 const Dashboard = React.lazy(() => import('../pages/Dashboard/Dashboard'))
@@ -21,24 +20,22 @@ export function App() {
       base={process.env.REACT_APP_API_URL}
       requestOptions={apikey && { headers: { 'X-API-KEY': apikey } }}
     >
-      <AppWrapper>
-        <React.Suspense fallback={<Progress />}>
-          <Router>
-            <Dashboard path="/dashboard" />
+      <React.Suspense fallback={<Progress />}>
+        <Router>
+          <Dashboard path="/dashboard" />
 
-            {!apikey ? (
-              <>
-                <Home path="/" />
-                <Auth path="/auth" />
-              </>
-            ) : (
-              <Logout path="/logout" />
-            )}
+          {!apikey ? (
+            <>
+              <Home path="/" />
+              <Auth path="/auth" />
+            </>
+          ) : (
+            <Logout path="/logout" />
+          )}
 
-            <Redirect noThrow from="*" to={apikey ? '/dashboard' : '/'} />
-          </Router>
-        </React.Suspense>
-      </AppWrapper>
+          <Redirect noThrow from="*" to={apikey ? '/dashboard' : '/auth'} />
+        </Router>
+      </React.Suspense>
     </RestfulProvider>
   )
 }

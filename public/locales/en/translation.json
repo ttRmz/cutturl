@@ -3,6 +3,11 @@
     "demo": "Try a demo",
     "key": "Enter your API key"
   },
+  "menu": {
+    "dashboard": "Shortener",
+    "history": "History",
+    "profile": "Profile"
+  },
   "auth": {
     "title": "API Key",
     "head": "Enter your personal API key from",

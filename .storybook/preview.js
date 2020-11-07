@@ -3,6 +3,8 @@ import { create } from '@storybook/theming'
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
 import pkg from '../package.json'
+import { Progress } from '../src/components'
+import '../src/i18n'
 import theme from '../src/styles/theme'
 
 export const parameters = {
@@ -25,7 +27,9 @@ export const parameters = {
 export const decorators = [
   Story => (
     <ThemeProvider theme={theme}>
-      <Story />
+      <React.Suspense fallback={<Progress />}>
+        <Story />
+      </React.Suspense>
     </ThemeProvider>
   ),
 ]

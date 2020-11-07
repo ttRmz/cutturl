@@ -15,11 +15,11 @@ const Block = styled.div`
   margin-bottom: 12px;
 `
 
-const Template = ({ blocks, title, ...args }) => (
-  <Layout title={title} {...args}>
-    {title && <PageTitle>{title}</PageTitle>}
+const Template = ({ blocks, topBarTitle, pageTitle, showMenu, ...args }) => (
+  <Layout title={topBarTitle} showMenu={showMenu} {...args}>
+    {pageTitle && <PageTitle>{pageTitle}</PageTitle>}
 
-    {[...Array(blocks)].map(index => (
+    {[...Array(blocks)].map((el, index) => (
       <Block key={index} />
     ))}
   </Layout>
@@ -28,6 +28,8 @@ const Template = ({ blocks, title, ...args }) => (
 export const Example = Template.bind({})
 
 Example.args = {
-  title: 'Label',
+  topBarTitle: 'Label',
+  pageTitle: 'Label',
+  showMenu: true,
   blocks: 10,
 }

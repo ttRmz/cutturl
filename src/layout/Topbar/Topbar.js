@@ -37,4 +37,4 @@ Topbar.propTypes = {
   label: PropTypes.string.isRequired,
 }
 
-Topbar.HEIGHT_BASE = HEIGHT_BASE
+Topbar.HEIGHT = HEIGHT_BASE
