@@ -23,4 +23,5 @@ Example.args = {
   color: Button.defaultProps.color,
   extended: Button.defaultProps.extended,
   children: 'Button label',
+  disabled: Button.defaultProps.disabled,
 }

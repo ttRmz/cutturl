@@ -13,18 +13,19 @@ const Logout = React.lazy(() => import('../pages/Logout/Logout'))
 export function App() {
   const { user } = useUserContext()
 
-  const apikey = user?.apikey
+  const apikey = user?.apikey || process.env.REACT_APP_API_KEY
+  const isAuth = !!user?.apikey
 
   return (
     <RestfulProvider
       base={process.env.REACT_APP_API_URL}
-      requestOptions={apikey && { headers: { 'X-API-KEY': apikey } }}
+      requestOptions={{ headers: { 'X-API-KEY': apikey } }}
     >
       <React.Suspense fallback={<Progress />}>
         <Router>
           <Dashboard path="/dashboard" />
 
-          {!apikey ? (
+          {!isAuth ? (
             <>
               <Home path="/" />
               <Auth path="/auth" />
@@ -33,7 +34,7 @@ export function App() {
             <Logout path="/logout" />
           )}
 
-          <Redirect noThrow from="*" to={apikey ? '/dashboard' : '/auth'} />
+          <Redirect noThrow from="*" to={isAuth ? '/dashboard' : '/auth'} />
         </Router>
       </React.Suspense>
     </RestfulProvider>

@@ -18,5 +18,11 @@
     "submit": "Envoyer",
     "error": "Une erreur est survenue, veuillez vérifier vos informations de connexion"
   },
-  "dashboard": { "head": "Tableau de bord" }
+  "dashboard": {
+    "title": "Générateur",
+    "head": "Raccourcissez vos liens",
+    "submit": "Générer",
+    "field": "Collez votre long URL ici",
+    "error": "Une erreur est survenue, veuillez vérifier l'URL que vous avez fourni"
+  }
 }

@@ -15,13 +15,15 @@ export const Button = styled.button`
   min-width: 160px;
   text-align: center;
   ${({ extended }) => extended && `width: 100%;`}
+  ${({ disabled }) => disabled && `opacity: .6`}
 `
 
 Button.propTypes = {
   color: PropTypes.oneOf(COLORS),
   extended: PropTypes.bool,
+  disabled: PropTypes.bool,
 }
 
-Button.defaultProps = { color: 'primary', extended: false }
+Button.defaultProps = { color: 'primary', extended: false, disabled: false }
 
 Button.COLORS = COLORS

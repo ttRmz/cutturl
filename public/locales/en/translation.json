@@ -18,5 +18,11 @@
     "submit": "Submit",
     "error": "An error occurred, please verify your login informations"
   },
-  "dashboard": { "head": "Dashboard" }
+  "dashboard": {
+    "title": "Shortener",
+    "head": "Cut your link shorter",
+    "submit": "Generate",
+    "field": "Past your long URL here",
+    "error": "An error occurred, please verify the URL you provided"
+  }
 }
