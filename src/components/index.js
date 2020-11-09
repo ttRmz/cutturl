@@ -1,4 +1,5 @@
 export * from './Button'
+export * from './IconBlock'
 export * from './Input'
 export * from './Logo'
 export * from './MessageBlock'
