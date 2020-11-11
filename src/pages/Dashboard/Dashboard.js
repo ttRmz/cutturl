@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import {
   Button,
   Input,
+  LinkItem,
   MessageBlock,
   PageTitle,
   Spinner,
@@ -64,7 +65,7 @@ export default function Dashboard() {
           <MessageBlock color="error">{t('dashboard.error')}</MessageBlock>
         )}
 
-        {result && !loading && result.link}
+        {result && !loading && <LinkItem data={result} />}
       </DashboardForm>
     </Layout>
   )

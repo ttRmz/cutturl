@@ -1,1 +1,1 @@
-export * from './IconBlock.styles'
+export * from './IconBlock'

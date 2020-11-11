@@ -24,5 +24,9 @@
     "submit": "Générer",
     "field": "Collez votre long URL ici",
     "error": "Une erreur est survenue, veuillez vérifier l'URL que vous avez fourni"
+  },
+  "link": {
+    "banned": "Banni",
+    "live": "Actif"
   }
 }

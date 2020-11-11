@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 
 export const DashboardForm = styled.form`
-  flex: 1;
-  min-width: 0;
   display: flex;
   flex-direction: column;
 `
