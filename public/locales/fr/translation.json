@@ -28,12 +28,20 @@
   "history": {
     "title": "Historique",
     "head": "Votre historique",
-    "empty": "Votre historique est vide"
+    "empty": "Votre historique est vide",
+    "generate": "Générer un lien",
+    "clear": "Vider d'historique",
+    "clear_message": "Êtes vous sûr de vouloir vider votre historique"
   },
   "link": {
     "banned": "Banni",
     "live": "Actif",
     "edit": "Éditer le lien",
-    "delete": "Supprimer le lien"
+    "delete": "Supprimer le lien",
+    "delete_message": "Êtes vous sûr de vouloir supprimer le lien"
+  },
+  "modal": {
+    "confirm": "Confirmer",
+    "cancel": "Annuler"
   }
 }

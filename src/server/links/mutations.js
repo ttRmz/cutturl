@@ -8,3 +8,12 @@ export const useCreateLink = () => {
 
   return { createLink: mutate, ...rest }
 }
+
+export const useDeleteLink = () => {
+  const { mutate, ...rest } = useMutate({
+    path: '/links',
+    verb: 'DELETE',
+  })
+
+  return { deleteLink: mutate, ...rest }
+}

@@ -11,6 +11,11 @@ export const HistoryListItem = styled.li`
   margin-bottom: 12px;
 `
 
+export const HistoryClear = styled.button`
+  margin-top: 12px;
+  margin-bottom: 32px;
+`
+
 export const HistoryAsset = styled.figure`
   width: 80%;
 `

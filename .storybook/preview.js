@@ -4,6 +4,7 @@ import React from 'react'
 import { ThemeProvider } from 'styled-components'
 import pkg from '../package.json'
 import { Progress } from '../src/components'
+import { ModalProvider } from '../src/contexts/modal'
 import '../src/i18n'
 import theme from '../src/styles/theme'
 
@@ -27,9 +28,11 @@ export const parameters = {
 export const decorators = [
   Story => (
     <ThemeProvider theme={theme}>
-      <React.Suspense fallback={<Progress />}>
-        <Story />
-      </React.Suspense>
+      <ModalProvider>
+        <React.Suspense fallback={<Progress />}>
+          <Story />
+        </React.Suspense>
+      </ModalProvider>
     </ThemeProvider>
   ),
 ]

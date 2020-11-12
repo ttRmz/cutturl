@@ -9,11 +9,14 @@ import {
   PageTitle,
   Spinner,
 } from '../../components'
+import { useModalContext } from '../../contexts/modal'
 import { setPageTitle } from '../../core/setPageTitle'
 import { Layout } from '../../layout'
+import { useDeleteLink } from '../../server/links/mutations'
 import { useLinks } from '../../server/links/queries'
 import {
   HistoryAsset,
+  HistoryClear,
   HistoryEmptyMessage,
   HistoryList,
   HistoryListItem,
@@ -21,7 +24,9 @@ import {
 
 export default function History() {
   const { t } = useTranslation()
-  const { loading, links } = useLinks()
+  const { loading: loadingLinks, links, refetch } = useLinks()
+  const { deleteLink, loading: loadingDelete } = useDeleteLink()
+  const { openModal } = useModalContext()
 
   const title = t('history.title')
 
@@ -30,6 +35,31 @@ export default function History() {
   }, [title])
 
   const hasResults = links?.total > 0
+  const loading = loadingDelete || loadingLinks
+
+  const handleDeleteLink = id => {
+    deleteLink(id).then((res, err) => {
+      !err && refetch()
+    })
+  }
+
+  const handleClearHistory = async () => {
+    await Promise.all(
+      links.data.map(async link => {
+        await deleteLink(link.id)
+      }),
+    )
+
+    refetch()
+  }
+
+  const openClearHistoryModal = () => {
+    openModal({
+      title: t('history.clear'),
+      message: t('history.clear_message'),
+      onConfirm: handleClearHistory,
+    })
+  }
 
   return (
     <Layout showMenu title={title}>
@@ -40,14 +70,25 @@ export default function History() {
 
         {!loading &&
           (hasResults ? (
-            links?.data?.map(link => (
-              <LinkItem
-                editable
-                as={HistoryListItem}
-                key={link.id}
-                data={link}
-              />
-            ))
+            <>
+              {links?.data?.map(link => (
+                <LinkItem
+                  onDelete={handleDeleteLink}
+                  as={HistoryListItem}
+                  key={link.id}
+                  data={link}
+                />
+              ))}
+
+              <HistoryClear
+                as={Button}
+                onClick={openClearHistoryModal}
+                extended
+                color="error"
+              >
+                {t('history.clear')}
+              </HistoryClear>
+            </>
           ) : (
             <>
               <Asset as={HistoryAsset} src={NoDataAsset} />
@@ -55,7 +96,7 @@ export default function History() {
               <HistoryEmptyMessage>{t('history.empty')}</HistoryEmptyMessage>
 
               <Button as={ButtonLink} to="/dashboard">
-                Generate links
+                {t('history.generate')}
               </Button>
             </>
           ))}

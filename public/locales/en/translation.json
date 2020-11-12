@@ -28,12 +28,20 @@
   "history": {
     "title": "Hitstory",
     "head": "Your history",
-    "empty": "It looks that your history is empty"
+    "empty": "It looks that your history is empty",
+    "generate": "Generate a link",
+    "clear": "Clear history",
+    "clear_message": "Are you sure you want to clear your history"
   },
   "link": {
     "banned": "Banned",
     "live": "Live",
     "edit": "Edit link",
-    "delete": "Remove link"
+    "delete": "Remove link",
+    "delete_message": "Are you sure you want to remove the link"
+  },
+  "modal": {
+    "confirm": "Confirm",
+    "cancel": "Cancel"
   }
 }

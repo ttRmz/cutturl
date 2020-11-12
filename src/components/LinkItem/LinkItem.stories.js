@@ -16,5 +16,16 @@ Example.args = {
     target: 'https://github.com/ttRmz/cutturl',
     banned: false,
   },
-  editable: false,
+  onDelete: null,
+}
+
+export const ExampleWithActions = Template.bind({})
+
+ExampleWithActions.args = {
+  data: {
+    link: 'https://github.com/ttRmz/cutturl',
+    target: 'https://github.com/ttRmz/cutturl',
+    banned: false,
+  },
+  onDelete: () => console.log('onDelete'),
 }

@@ -11,6 +11,7 @@ import { copyToClipboard, stopEvent } from '@ttrmz/react-utils'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
+import { useModalContext } from '../../contexts/modal'
 import { Badge } from '../Badge'
 import { Dropdown } from '../Dropdown'
 import { EllipsisSpan } from '../EllipsisSpan'
@@ -22,9 +23,11 @@ import {
   LinkItemWrapper,
 } from './LinkItem.styles'
 
-export function LinkItem({ data, editable, ...props }) {
-  const [copied, setCopied] = React.useState(false)
+export function LinkItem({ data, onDelete, ...props }) {
   const { t } = useTranslation()
+  const { openModal } = useModalContext()
+
+  const [copied, setCopied] = React.useState(false)
 
   const handleCopyLink = event => {
     stopEvent(event)
@@ -40,7 +43,11 @@ export function LinkItem({ data, editable, ...props }) {
   }, [copied])
 
   const handleDeleteLink = () => {
-    console.log('handleDeleteLink')
+    openModal({
+      title: t('link.delete'),
+      message: `${t('link.delete_message')} ${data.link}`,
+      onConfirm: () => onDelete(data.id),
+    })
   }
 
   return (
@@ -60,7 +67,7 @@ export function LinkItem({ data, editable, ...props }) {
           <FontAwesomeIcon icon={faExternalLinkAlt} />
         </LinkItemLink>
 
-        {editable ? (
+        {!!onDelete ? (
           <Dropdown
             actionElement={
               <Badge color="grey">
@@ -102,5 +109,5 @@ export function LinkItem({ data, editable, ...props }) {
 
 LinkItem.propTypes = {
   data: PropTypes.object.isRequired,
-  editable: PropTypes.bool,
+  onDelete: PropTypes.func,
 }
