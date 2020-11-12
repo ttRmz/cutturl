@@ -25,6 +25,11 @@
     "field": "Collez votre long URL ici",
     "error": "Une erreur est survenue, veuillez vérifier l'URL que vous avez fourni"
   },
+  "history": {
+    "title": "Historique",
+    "head": "Votre historique",
+    "empty": "Votre historique est vide"
+  },
   "link": {
     "banned": "Banni",
     "live": "Actif"

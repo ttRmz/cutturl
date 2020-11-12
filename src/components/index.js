@@ -1,6 +1,7 @@
 export * from './Asset'
 export * from './Badge'
 export * from './Button'
+export * from './ButtonLink'
 export * from './EllipsisSpan'
 export * from './IconBlock'
 export * from './Input'

@@ -25,6 +25,11 @@
     "field": "Past your long URL here",
     "error": "An error occurred, please verify the URL you provided"
   },
+  "history": {
+    "title": "Hitstory",
+    "head": "Your history",
+    "empty": "It looks that your history is empty"
+  },
   "link": {
     "banned": "Banned",
     "live": "Live"

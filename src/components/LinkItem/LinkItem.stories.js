@@ -10,4 +10,10 @@ const Template = args => <LinkItem {...args} />
 
 export const Example = Template.bind({})
 
-Example.args = {}
+Example.args = {
+  data: {
+    link: 'https://github.com/ttRmz/cutturl',
+    target: 'https://github.com/ttRmz/cutturl',
+    banned: false,
+  },
+}

@@ -6,6 +6,7 @@ import { useUserContext } from '../contexts/user'
 
 const Home = React.lazy(() => import('../pages/Home/Home'))
 const Dashboard = React.lazy(() => import('../pages/Dashboard/Dashboard'))
+const History = React.lazy(() => import('../pages/History/History'))
 
 const Auth = React.lazy(() => import('../pages/Auth/Auth'))
 const Logout = React.lazy(() => import('../pages/Logout/Logout'))
@@ -31,7 +32,10 @@ export function App() {
               <Auth path="/auth" />
             </>
           ) : (
-            <Logout path="/logout" />
+            <>
+              <History path="/history" />
+              <Logout path="/logout" />
+            </>
           )}
 
           <Redirect noThrow from="*" to={isAuth ? '/dashboard' : '/auth'} />

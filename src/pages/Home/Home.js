@@ -1,13 +1,9 @@
-import { Link } from '@reach/router'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { Logo, PageTitle } from '../../components'
+import { ButtonLink, Logo, PageTitle } from '../../components'
 import { setPageTitle } from '../../core/setPageTitle'
 import { Layout } from '../../layout'
 import { HomeAction } from './Home.styles'
-
-// prevent warnings on DOM rendering
-const ButtonLink = ({ extended, color, ...props }) => <Link {...props} />
 
 export default function Home() {
   const { t } = useTranslation()
