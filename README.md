@@ -1,5 +1,6 @@
 # Welcome to CUTTURL 👋
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/49a614bf-7809-40fc-aa78-2d9bd253ae34/deploy-status)](https://app.netlify.com/sites/cutturl/deploys)
 ![Version](https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000)
 ![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg)
 [![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://github.com/ttRmz/cutturl#readme)
