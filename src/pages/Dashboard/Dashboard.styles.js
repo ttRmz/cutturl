@@ -9,7 +9,3 @@ export const DashboardSubmit = styled.button`
   margin-top: 12px;
   margin-bottom: 24px;
 `
-
-export const DashboardSpinner = styled.button`
-  margin: 0 auto;
-`

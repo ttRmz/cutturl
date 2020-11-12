@@ -40,9 +40,18 @@
     "connected_with": "Connecté avec"
   },
   "link": {
+    "title": "Détails",
     "banned": "Banni",
     "live": "Actif",
+    "description": "Description",
+    "description__placeholder": "Ajouter une desciption",
+    "taget": "Destination",
+    "taget_placeholder": "Modifer la destination",
+    "address": "Adresse",
+    "address_placeholder": "Modifier l'URL customisé",
+    "submit": "Envoyer les modifications",
     "edit": "Éditer le lien",
+    "update_error": "Modifications échouées, veuillez vérifier votre formulaire",
     "delete": "Supprimer le lien",
     "delete_message": "Êtes vous sûr de vouloir supprimer le lien"
   },

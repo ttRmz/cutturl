@@ -7,6 +7,7 @@ import { useUserContext } from '../contexts/user'
 const Home = React.lazy(() => import('../pages/Home/Home'))
 const Dashboard = React.lazy(() => import('../pages/Dashboard/Dashboard'))
 const History = React.lazy(() => import('../pages/History/History'))
+const Link = React.lazy(() => import('../pages/Link/Link'))
 const Profile = React.lazy(() => import('../pages/Profile/Profile'))
 
 const Auth = React.lazy(() => import('../pages/Auth/Auth'))
@@ -35,6 +36,7 @@ export function App() {
           ) : (
             <>
               <History path="/history" />
+              <Link path="/link/:id" />
               <Profile path="/profile" />
               <Logout path="/logout" />
             </>

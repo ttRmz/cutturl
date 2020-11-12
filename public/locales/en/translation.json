@@ -40,9 +40,18 @@
     "connected_with": "Connected with"
   },
   "link": {
+    "title": "Details",
     "banned": "Banned",
     "live": "Live",
+    "description": "Description",
+    "description__placeholder": "Add a description",
+    "taget": "Target",
+    "taget_placeholder": "Edit link's target",
+    "address": "Address",
+    "address_placeholder": "Change the customised URL",
+    "submit": "Sumbit changes",
     "edit": "Edit link",
+    "update_error": "Update failed, please verify your changes",
     "delete": "Remove link",
     "delete_message": "Are you sure you want to remove the link"
   },

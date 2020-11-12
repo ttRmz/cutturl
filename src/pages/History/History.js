@@ -37,12 +37,6 @@ export default function History() {
   const hasResults = links?.total > 0
   const loading = loadingDelete || loadingLinks
 
-  const handleDeleteLink = id => {
-    deleteLink(id).then((res, err) => {
-      !err && refetch()
-    })
-  }
-
   const handleClearHistory = async () => {
     await Promise.all(
       links.data.map(async link => {
@@ -73,7 +67,7 @@ export default function History() {
             <>
               {links?.data?.map(link => (
                 <LinkItem
-                  onDelete={handleDeleteLink}
+                  onDelete={() => deleteLink(link.id, refetch)}
                   as={HistoryListItem}
                   key={link.id}
                   data={link}

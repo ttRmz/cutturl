@@ -7,3 +7,11 @@ export const useLinks = () => {
 
   return { links: data, ...rest }
 }
+
+export const useLink = id => {
+  const { data, ...rest } = useGet({
+    path: `/links/${id}/stats`,
+  })
+
+  return { link: data, ...rest }
+}

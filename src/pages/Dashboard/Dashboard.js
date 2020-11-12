@@ -12,11 +12,7 @@ import {
 import { setPageTitle } from '../../core/setPageTitle'
 import { Layout } from '../../layout'
 import { useCreateLink } from '../../server/links/mutations'
-import {
-  DashboardForm,
-  DashboardSpinner,
-  DashboardSubmit,
-} from './Dashboard.styles'
+import { DashboardForm, DashboardSubmit } from './Dashboard.styles'
 
 export default function Dashboard() {
   const { value: link, onChange: onChangeLink, setValue: setLink } = useInput(
@@ -59,7 +55,7 @@ export default function Dashboard() {
           {t('dashboard.submit')}
         </DashboardSubmit>
 
-        {loading && <Spinner as={DashboardSpinner} />}
+        {loading && <Spinner />}
 
         {error && (
           <MessageBlock color="error">{t('dashboard.error')}</MessageBlock>

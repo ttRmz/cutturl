@@ -8,7 +8,7 @@ export const SpinnerWrapper = styled.div`
   min-width: ${getSize};
   height: ${getSize};
   min-height: ${getSize};
-
+  margin: 0 auto;
   animation: contanim 2s linear infinite;
 
   svg {
