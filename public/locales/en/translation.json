@@ -33,6 +33,12 @@
     "clear": "Clear history",
     "clear_message": "Are you sure you want to clear your history"
   },
+  "profile": {
+    "title": "Profile",
+    "head": "Your profile",
+    "logout": "Disconnect",
+    "connected_with": "Connected with"
+  },
   "link": {
     "banned": "Banned",
     "live": "Live",
