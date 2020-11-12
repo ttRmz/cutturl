@@ -41,7 +41,12 @@ export default function History() {
         {!loading &&
           (hasResults ? (
             links?.data?.map(link => (
-              <LinkItem as={HistoryListItem} key={link.id} data={link} />
+              <LinkItem
+                editable
+                as={HistoryListItem}
+                key={link.id}
+                data={link}
+              />
             ))
           ) : (
             <>

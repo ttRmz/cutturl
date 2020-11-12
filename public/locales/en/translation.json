@@ -32,6 +32,8 @@
   },
   "link": {
     "banned": "Banned",
-    "live": "Live"
+    "live": "Live",
+    "edit": "Edit link",
+    "delete": "Remove link"
   }
 }

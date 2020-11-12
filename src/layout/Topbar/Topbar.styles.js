@@ -11,6 +11,7 @@ export const TopbarWrapper = styled.header`
   left: 0;
   overflow: hidden;
   background-color: #fff;
+  z-index: 20;
 `
 
 export const TopbarLogo = styled.header`

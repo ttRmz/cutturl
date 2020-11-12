@@ -32,6 +32,8 @@
   },
   "link": {
     "banned": "Banni",
-    "live": "Actif"
+    "live": "Actif",
+    "edit": "Éditer le lien",
+    "delete": "Supprimer le lien"
   }
 }

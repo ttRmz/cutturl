@@ -16,4 +16,5 @@ Example.args = {
     target: 'https://github.com/ttRmz/cutturl',
     banned: false,
   },
+  editable: false,
 }
