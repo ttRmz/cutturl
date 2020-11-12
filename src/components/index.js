@@ -1,3 +1,4 @@
+export * from './Asset'
 export * from './Badge'
 export * from './Button'
 export * from './EllipsisSpan'
