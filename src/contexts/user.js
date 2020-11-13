@@ -25,7 +25,9 @@ export function UserContextProvider({ ...rest }) {
       setUser(userResponse)
       navigate('/dashboard')
     }
-  }, [userResponse, setUser])
+    // prevent setUser(userResponse) on logout
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [userResponse])
 
   const login = React.useCallback(
     apiKey => {
