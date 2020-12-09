@@ -37,21 +37,17 @@ export default function History() {
   const hasResults = links?.total > 0
   const loading = loadingDelete || loadingLinks
 
-  const handleClearHistory = async () => {
-    await Promise.all(
-      links.data.map(async link => {
-        await deleteLink(link.id)
-      }),
-    )
-
-    refetch()
+  const handleClearHistory = () => {
+    Promise.all(
+      links.data.map(async link => await deleteLink(link.id)),
+    ).then(() => refetch())
   }
 
   const openClearHistoryModal = () => {
     openModal({
       title: t('history.clear'),
       message: t('history.clear_message'),
-      onConfirm: handleClearHistory,
+      onConfirm: () => handleClearHistory(),
     })
   }
 
@@ -67,7 +63,9 @@ export default function History() {
             <>
               {links?.data?.map(link => (
                 <LinkItem
-                  onDelete={() => deleteLink(link.id, refetch)}
+                  onDelete={() =>
+                    deleteLink(link.id).then((res, err) => !err && refetch())
+                  }
                   as={HistoryListItem}
                   key={link.id}
                   data={link}

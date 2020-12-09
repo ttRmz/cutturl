@@ -15,11 +15,7 @@ export const useDeleteLink = () => {
     verb: 'DELETE',
   })
 
-  const deleteLink = (id, callback) => {
-    mutate(id).then((res, err) => {
-      !err && callback()
-    })
-  }
+  const deleteLink = id => mutate(id)
 
   return { deleteLink, ...rest }
 }

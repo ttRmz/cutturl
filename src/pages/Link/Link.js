@@ -65,7 +65,8 @@ export default function Link({ id }) {
     openModal({
       title: t('link.delete'),
       message: `${t('link.delete_message')} ${link.link}`,
-      onConfirm: () => deleteLink(id, () => navigate('/history')),
+      onConfirm: () =>
+        deleteLink(id).then((res, err) => !err && navigate('/history')),
     })
   }
 
