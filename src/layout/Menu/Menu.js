@@ -5,7 +5,7 @@ import { Link } from '@reach/router'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { useTheme } from 'styled-components'
-import { MenuLink, MenuWrapper } from './Menu.styles'
+import { MenuContent, MenuLink, MenuWrapper } from './Menu.styles'
 
 const HEIGHT_BASE = 56
 
@@ -34,23 +34,25 @@ export function Menu(props) {
 
   return (
     <MenuWrapper {...props}>
-      {MENU_CONFIG.map(route => (
-        <MenuLink
-          key={route.key}
-          as={Link}
-          to={route.path}
-          getProps={({ isCurrent }) => {
-            return {
-              style: {
-                color: isCurrent ? theme.secondary.base : theme.grey.base,
-              },
-            }
-          }}
-        >
-          <FontAwesomeIcon icon={route.icon} />
-          <span>{t(`menu.${route.key}`)}</span>
-        </MenuLink>
-      ))}
+      <MenuContent>
+        {MENU_CONFIG.map(route => (
+          <MenuLink
+            key={route.key}
+            as={Link}
+            to={route.path}
+            getProps={({ isCurrent }) => {
+              return {
+                style: {
+                  color: isCurrent ? theme.secondary.base : theme.grey.base,
+                },
+              }
+            }}
+          >
+            <FontAwesomeIcon icon={route.icon} />
+            <span>{t(`menu.${route.key}`)}</span>
+          </MenuLink>
+        ))}
+      </MenuContent>
     </MenuWrapper>
   )
 }

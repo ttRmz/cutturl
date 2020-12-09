@@ -1,8 +1,8 @@
 import styled from 'styled-components'
+import { WithMaxWidth } from '../../styles/responsive'
 import { Menu } from './Menu'
 
 export const MenuWrapper = styled.nav`
-  width: 100%;
   height: ${() => Menu.HEIGHT}px;
   display: inline-flex;
   justify-content: center;
@@ -15,6 +15,15 @@ export const MenuWrapper = styled.nav`
   background-color: #fff;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   z-index: 20;
+`
+
+export const MenuContent = styled(WithMaxWidth)`
+  height: 100%;
+  flex: 1;
+  min-width: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 `
 
 export const MenuLink = styled.a`
