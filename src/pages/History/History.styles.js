@@ -18,10 +18,11 @@ export const HistoryClear = styled.button`
 
 export const HistoryAsset = styled.figure`
   width: 80%;
+  max-width: 440px;
 `
 
 export const HistoryEmptyMessage = styled.p`
-  margin-top: 12px;
-  margin-bottom: 18px;
+  margin-top: 24px;
+  margin-bottom: 32px;
   font-weight: 500;
 `
